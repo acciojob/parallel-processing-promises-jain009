@@ -20,6 +20,7 @@ funnction downloadImage(url){
 	
 	};
 	)
+}
 	 function downloadImage(imageUrls){
 		 const outputDiv = document.getElementById("output");
 		 const errorDiv = document.getElelmentById("error");
@@ -38,7 +39,7 @@ funnction downloadImage(url){
 			 errorDiv.textContent = error;
 		 });
 	 }
-}
+
 
 // Call the function to download images
 downloadImages(imageUrls);
