@@ -21,7 +21,7 @@ funnction downloadImage(url){
 	};
 	)
 }
-	 function downloadImage(imageUrls){
+	 function downloadImages(images){
 		 const outputDiv = document.getElementById("output");
 		 const errorDiv = document.getElelmentById("error");
 		 const loadingDiv = document.getElementById("loading");
@@ -29,7 +29,7 @@ funnction downloadImage(url){
 		 loadingDiv.style.display ="block";
 		 errorDiv.textContent = "";
 		 outputDiv.ineerHTML ="";
-		 Promise.all(imageUrls.map(downloadImage))
+		 Promise.all(images.map(downloadImage))
 		 .then(images => {
 			 loadingDiv.style.dispaly ="none";
 			 images.forEach(img => outputDiv.appendChild(img));
@@ -42,4 +42,4 @@ funnction downloadImage(url){
 
 
 // Call the function to download images
-downloadImages(imageUrls);
+downloadImages(images);
